@@ -5,12 +5,10 @@
     "passthrough": false,
     "modules-left": [],
     "modules-center": [
-        "clock"
+        "clock",
+        "bluetooth"
     ],
     "modules-right": [],
-    "sway/window": {
-        "max-length": 50
-    },
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
     }
