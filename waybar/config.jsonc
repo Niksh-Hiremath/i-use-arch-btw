@@ -1,0 +1,17 @@
+{
+    "mode": "dock",
+    "start_hidden": false,
+    "exclusive": false,
+    "passthrough": false,
+    "modules-left": [],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [],
+    "sway/window": {
+        "max-length": 50
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    }
+}

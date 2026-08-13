@@ -1,0 +1,7 @@
+@import "colors.css";
+
+
+* {
+    all: unset;
+    font-family: "JetBrains Nerd Font Propo", monospace;
+}

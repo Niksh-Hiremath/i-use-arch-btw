@@ -1,0 +1,9 @@
+{
+    "workbench.startupEditor": "none",
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "JetBrainsMono Nerd Font Propo",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmPasteNative": false,
+    "explorer.confirmDelete": false
+}
