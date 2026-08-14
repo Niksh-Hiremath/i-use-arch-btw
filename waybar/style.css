@@ -1,7 +1,35 @@
-@import "colors.css";
-
+@import "colors/color.css";
 
 * {
     all: unset;
-    font-family: "JetBrains Nerd Font Propo", monospace;
+    font-family: "Monocraft", "JetBrains Nerd Font Propo", monospace;
+    font-size: 14px;
+}
+
+window#waybar.pill {
+    background-color: transparent;
+}
+
+
+#clock {
+    background-image: url("textures/stone.png");
+    background-repeat: repeat;
+    background-size: 32px;
+    color: @fg_primary;
+    border-radius: 999px;
+    padding: 2px 20px;
+}
+
+#workspaces button {
+    background-image: url("textures/dirt.png");
+    background-repeat: no-repeat;
+    background-size: 32px;
+    color: white;
+    padding: 2px 8px;
+    margin: 0 1px;
+    min-height: 16px;
+}
+
+#workspaces button.active {
+    background-image: url("textures/grass.png");
 }

@@ -1,0 +1,13 @@
+@define-color bg_base #1b1b22;
+@define-color bg_surface #2d3038;
+@define-color bg_overlay #3e434f;
+@define-color fg_primary #f0f4f8;
+@define-color fg_secondary #a4bad1;
+@define-color fg_muted #6b7787;
+@define-color border_active #f26219;
+@define-color border_inactive #5a616c;
+@define-color accent #f26219;
+@define-color accent_alt #ffb627;
+@define-color success #4abf68;
+@define-color warning #ffb627;
+@define-color urgent #e63946;

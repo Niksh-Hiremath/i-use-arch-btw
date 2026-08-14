@@ -1,15 +1,38 @@
 {
+    "name": "pill",
     "mode": "dock",
-    "start_hidden": false,
-    "exclusive": false,
-    "passthrough": false,
-    "modules-left": [],
+    "margin": "8 16 8 16",
+    "height": 24,
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
     "modules-center": [
-        "clock",
-        "bluetooth"
+        "clock"
     ],
     "modules-right": [],
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+        "interval": 60,
+        "format": "{:%H:%M}",
+        // "format": "{:%I:%M %p}",
+        "timezone": "",
+        "on-click": "~/.config/waybar/scripts/toggle-panel.sh"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "0",
+            "special": "S",
+            "default": "U"
+        },
+        "show-special": true
     }
 }

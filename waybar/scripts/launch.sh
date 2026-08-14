@@ -1,4 +1,4 @@
 #!/bin/bash
 
-pkill waybar
-waybar &
+pkill -f 'waybar.*config.jsonc'
+waybar -c ~/.config/waybar/config.jsonc &

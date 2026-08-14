@@ -15,6 +15,7 @@ local browser     = "google-chrome-stable"
 ---------------------
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
+local secMod = "ALT"
 
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + C", hl.dsp.window.close())
@@ -32,6 +33,11 @@ hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
 hl.bind(mainMod .. " + right", hl.dsp.focus({ direction = "right" }))
 hl.bind(mainMod .. " + up", hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + down", hl.dsp.focus({ direction = "down" }))
+
+hl.bind(secMod .. " + left", hl.dsp.window.move({ direction = "left" }))
+hl.bind(secMod .. " + right", hl.dsp.window.move({ direction = "right" }))
+hl.bind(secMod .. " + up", hl.dsp.window.move({ direction = "up" }))
+hl.bind(secMod .. " + down", hl.dsp.window.move({ direction = "down" }))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]

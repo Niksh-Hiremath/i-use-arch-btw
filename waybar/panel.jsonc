@@ -1,0 +1,12 @@
+{
+    "name": "panel",
+    "mode": "overlay",
+    "start_hidden": false,
+    "exclusive": false,
+    "passthrough": false,
+    "modules-left": [],
+    "modules-center": [
+        "bluetooth"
+    ],
+    "modules-right": []
+}
