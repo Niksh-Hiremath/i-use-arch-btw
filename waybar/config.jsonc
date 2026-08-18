@@ -4,12 +4,32 @@
     "margin": "8 16 8 16",
     "height": 24,
     "modules-left": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "cpu",
+        "memory",
+        "custom/gpu"
     ],
     "modules-center": [
         "clock"
     ],
-    "modules-right": [],
+    "modules-right": [
+        "pulseaudio",
+        "bluetooth",
+        "network"
+        // "backlight",
+        // "battery"
+    ],
+    "cpu": {
+        "format": "󰻠 {usage}%"
+    },
+    "memory": {
+        "format": "󰍛 {percentage}%"
+    },
+    "custom/gpu": {
+        "exec": "~/.config/waybar/scripts/gpu-usage.sh",
+        "return-type": "json",
+        "interval": 1
+    },
     "clock": {
         "interval": 60,
         "format": "{:%H:%M}",
@@ -34,5 +54,91 @@
             "default": "U"
         },
         "show-special": true
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "󰂰 {volume}%",
+        "on-click": "pavucontrol",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "scroll-step": 1,
+        "format-icons": {
+            "default": [
+                "󰖀",
+                "󰕾"
+            ],
+            "default-muted": "󰝟",
+            "headphone": "󰋋",
+            "headphone-muted": "󰟎",
+            "speaker": "󰓃",
+            "speaker-muted": "󰓄",
+            "hdmi": "󰽟",
+            "hdmi-muted": "󰽠",
+            "headset": "󰋋",
+            "headset-muted": "󰟎",
+            "hands-free": "󰏲",
+            "hands-free-muted": "󰷯",
+            "portable": "󰏲",
+            "portable-muted": "󰷯",
+            "phone": "󰏲",
+            "phone-muted": "󰷯"
+        }
+    },
+    "network": {
+        "format-wifi": "󰖩 ",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰖪 ",
+        "format-disabled": " ",
+        "tooltip-format-wifi": "{essid}\n{ifname}: {ipaddr}\nSignal: {signalStrength}%",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "tooltip-format-disabled": "Wi-Fi disabled",
+        "on-click": "$TERMINAL -e impala"
+    },
+    "bluetooth": {
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+        "format-on": "󰂯",
+        "format-connected": "󰂱 {device_battery_percentage}%",
+        "tooltip-format": "Bluetooth",
+        "tooltip-format-disabled": "Bluetooth disabled",
+        "tooltip-format-off": "Bluetooth off",
+        "tooltip-format-on": "Bluetooth on",
+        "tooltip-format-connected": "{device_alias}\nBattery: {device_battery_percentage}%",
+        "on-click": "$TERMINAL -e bluetui"
     }
+    // "battery": {
+    //     "format": "{icon} {capacity}%",
+    //     "format-charging": "󰂄 {capacity}%",
+    //     "format-plugged": "󰚥 {capacity}%",
+    //     "format-full": "󰁹 {capacity}%",
+    //     "format-icons": [
+    //         "󰁺",
+    //         "󰁻",
+    //         "󰁼",
+    //         "󰁽",
+    //         "󰁾",
+    //         "󰁿",
+    //         "󰂀",
+    //         "󰂁",
+    //         "󰂂",
+    //         "󰁹"
+    //     ],
+    //     "states": {
+    //         "warning": 30,
+    //         "critical": 15
+    //     },
+    //     "tooltip-format": "Battery: {capacity}%\nTime: {time}"
+    // },
+    // "backlight": {
+    //     "format": "{icon} {percent}%",
+    //     "format-icons": [
+    //         "󰃞",
+    //         "󰃟",
+    //         "󰃠"
+    //     ],
+    //     "tooltip-format": "Brightness: {percent}%",
+    //     "on-scroll-up": "brightnessctl set +5%",
+    //     "on-scroll-down": "brightnessctl set 5%-"
+    // }
 }
