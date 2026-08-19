@@ -58,7 +58,7 @@
     "pulseaudio": {
         "format": "{icon} {volume}%",
         "format-bluetooth": "󰂰 {volume}%",
-        "on-click": "pavucontrol",
+        "on-click": "hyprctl eval 'waybar_pavucontrol()'",
         "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "scroll-step": 1,
         "format-icons": {
@@ -92,7 +92,7 @@
         "tooltip-format-ethernet": "{ifname}: {ipaddr}",
         "tooltip-format-disconnected": "Disconnected",
         "tooltip-format-disabled": "Wi-Fi disabled",
-        "on-click": "$TERMINAL -e impala"
+        "on-click": "$TERMINAL --class impala -e impala"
     },
     "bluetooth": {
         "format": "󰂯",
@@ -105,7 +105,7 @@
         "tooltip-format-off": "Bluetooth off",
         "tooltip-format-on": "Bluetooth on",
         "tooltip-format-connected": "{device_alias}\nBattery: {device_battery_percentage}%",
-        "on-click": "$TERMINAL -e bluetui"
+        "on-click": "$TERMINAL --class bluetui -e bluetui"
     }
     // "battery": {
     //     "format": "{icon} {capacity}%",
